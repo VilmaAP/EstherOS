@@ -12,8 +12,10 @@ pub const DB_URL: &str = "sqlite:estheros.db";
 pub const DB_FILE: &str = "estheros.db";
 
 /// (version, description, sql). Never edit a published migration; append a new one.
-const MIGRATIONS: &[(i64, &str, &str)] =
-    &[(1, "init", include_str!("../migrations/0001_init.sql"))];
+const MIGRATIONS: &[(i64, &str, &str)] = &[
+    (1, "init", include_str!("../migrations/0001_init.sql")),
+    (2, "gratitude_gospel", include_str!("../migrations/0002_gratitude_gospel.sql")),
+];
 
 pub fn latest_version() -> i64 {
     MIGRATIONS.last().map(|m| m.0).unwrap_or(0)

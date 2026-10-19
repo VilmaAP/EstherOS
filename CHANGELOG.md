@@ -2,6 +2,18 @@
 
 Todos los cambios relevantes de Estheros. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [Sin publicar]
+
+### Añadido
+
+- **Gratitud**: nueva sección para anotar cada día tres cosas por las que dar gracias (o más), editarlas o borrarlas con deshacer, ver la racha de días seguidos y releer los días anteriores. Atajo `Ctrl+5`.
+- **Evangelio del día**: plan de lectura de Mateo, Marcos, Lucas y Juan, un capítulo al día (89 en total) con el texto completo de la Reina-Valera 1909 incluido en la app, casilla «Lo leí», racha y lecturas recientes. Si un día no lees, al siguiente sigue el mismo capítulo. Atajo `Ctrl+6`.
+- Tarjetas «Evangelio del día» y «Doy gracias por…» en la pantalla Hoy.
+
+### Cambiado
+
+- Ajustes pasa de `Ctrl+5` a `Ctrl+7`.
+
 ## [1.0.0] - 2026-10-19
 
 Primera versión. Todo funciona sin conexión y los datos se guardan solo en el equipo.

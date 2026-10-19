@@ -1,5 +1,14 @@
 /** Tables whose changes are broadcast. `*` means "everything changed" (e.g. after an import). */
-export type DbTable = "event" | "journal_entry" | "todo_list" | "task" | "tag" | "setting" | "*";
+export type DbTable =
+  | "event"
+  | "journal_entry"
+  | "todo_list"
+  | "task"
+  | "tag"
+  | "setting"
+  | "gratitude_entry"
+  | "gospel_reading"
+  | "*";
 
 export const DB_CHANGED = "db:changed";
 

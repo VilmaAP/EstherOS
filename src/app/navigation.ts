@@ -1,4 +1,13 @@
-import { BookHeart, CalendarDays, ListTodo, Settings, Sun, type LucideIcon } from "lucide-react";
+import {
+  BookHeart,
+  BookOpenText,
+  CalendarDays,
+  HandHeart,
+  ListTodo,
+  Settings,
+  Sun,
+  type LucideIcon,
+} from "lucide-react";
 import type { ActionId, Scope } from "@/shared/hotkeys";
 import type { I18nKey } from "@/shared/i18n";
 
@@ -27,6 +36,8 @@ export const NAV_ITEMS: readonly NavItem[] = [
     scope: "journal",
   },
   { path: "/todo", labelKey: "nav.todo", icon: ListTodo, actionId: "nav.todo", scope: "todo" },
+  { path: "/gratitude", labelKey: "nav.gratitude", icon: HandHeart, actionId: "nav.gratitude" },
+  { path: "/gospel", labelKey: "nav.gospel", icon: BookOpenText, actionId: "nav.gospel" },
   { path: "/settings", labelKey: "nav.settings", icon: Settings, actionId: "nav.settings" },
 ];
 

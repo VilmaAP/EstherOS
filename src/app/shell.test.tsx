@@ -46,12 +46,16 @@ describe("shell", () => {
     expect(router.state.location.pathname).toBe("/today");
   });
 
-  it("navigates with Ctrl+1..5 and the sidebar", async () => {
+  it("navigates with Ctrl+1..7 and the sidebar", async () => {
     const router = renderShell("/today");
     await screen.findByRole("region", { name: "Hoy" });
     press("2", "Digit2", { ctrlKey: true });
     expect(router.state.location.pathname).toBe("/calendar");
     press("5", "Digit5", { ctrlKey: true });
+    expect(router.state.location.pathname).toBe("/gratitude");
+    press("6", "Digit6", { ctrlKey: true });
+    expect(router.state.location.pathname).toBe("/gospel");
+    press("7", "Digit7", { ctrlKey: true });
     expect(router.state.location.pathname).toBe("/settings");
     fireEvent.click(screen.getByRole("link", { name: /Tareas/ }));
     expect(router.state.location.pathname).toBe("/todo");

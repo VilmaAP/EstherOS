@@ -5,7 +5,15 @@ import { getAllSettings, getSetting } from "./repository";
 
 const HOME = "/today";
 /** Routes worth reopening at startup; anything else (dev pages, unknown) falls back to Today. */
-const RESTORABLE = ["/today", "/calendar", "/journal", "/todo", "/settings"];
+const RESTORABLE = [
+  "/today",
+  "/calendar",
+  "/journal",
+  "/todo",
+  "/gratitude",
+  "/gospel",
+  "/settings",
+];
 
 /** Route to open at startup according to "Pantalla de inicio". */
 export function resolveStartPath(settings: Pick<Settings, "start_screen" | "last_route">): string {

@@ -65,6 +65,10 @@ Escribe la tarea y añade la prioridad y la fecha en el mismo texto: `Comprar ve
 | --------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | ![Tareas en Pink](assets/screenshots/todo-pink.png) | ![Captura rápida con prioridad y fecha](assets/screenshots/todo-quickadd-white.png) |
 
+### Gratitud y Evangelio del día
+
+**Gratitud** te invita a anotar cada día tres cosas por las que dar gracias, con tu racha y el historial para releerlas. **Evangelio del día** te presenta un capítulo de los evangelios cada día, en orden de Mateo a Juan, con el texto completo de la Reina-Valera 1909 (dominio público) incluido en la app; marca «Lo leí» y al día siguiente tendrás el capítulo siguiente. Las dos aparecen también en la pantalla Hoy.
+
 ### Tres temas
 
 **Pink**, **White** y **Dark**, o **Sistema** para seguir el modo claro u oscuro de Windows. El cambio es instantáneo y sin parpadeos. También puedes ajustar el tamaño del texto y reducir las animaciones.
@@ -75,7 +79,7 @@ Escribe la tarea y añade la prioridad y la fecha en el mismo texto: `Comprar ve
 
 ### Atajos de teclado
 
-Navega con `Ctrl+1…5`, crea con `Ctrl+N`, cambia de tema con `Ctrl+Shift+T` y usa acordes como `G` `H` para saltar entre vistas. `Ctrl+/` muestra la hoja con los atajos de la pantalla en la que estás, y desde **Ajustes → Atajos** puedes reasignar cualquiera, con detección de conflictos.
+Navega con `Ctrl+1…7`, crea con `Ctrl+N`, cambia de tema con `Ctrl+Shift+T` y usa acordes como `G` `H` para saltar entre vistas. `Ctrl+/` muestra la hoja con los atajos de la pantalla en la que estás, y desde **Ajustes → Atajos** puedes reasignar cualquiera, con detección de conflictos.
 
 | Hoja de atajos (Dark)                                    | Atajos reasignables (Pink)                                           |
 | -------------------------------------------------------- | -------------------------------------------------------------------- |

@@ -7,6 +7,8 @@ import { calendarPath } from "@/features/calendar";
 import { useClock, useCurrentDay, useOpenJournal, useTodaySettings } from "../hooks";
 import { formatTodayDate, greeting } from "../model";
 import { CalendarCard } from "./CalendarCard";
+import { GospelCard } from "./GospelCard";
+import { GratitudeCard } from "./GratitudeCard";
 import { JournalCard } from "./JournalCard";
 import { TasksCard } from "./TasksCard";
 import { TomorrowRow } from "./TomorrowRow";
@@ -24,7 +26,10 @@ function TodayHeader({ today, userName }: { today: string; userName: string }) {
   );
 }
 
-/** Home screen (route `/today`): greeting, today's calendar, tasks and journal, and tomorrow. */
+/**
+ * Home screen (route `/today`): greeting, today's calendar, tasks and journal, the gospel and
+ * gratitude of the day, and tomorrow.
+ */
 export function TodayPage() {
   useScope("today");
   const navigate = useNavigate();
@@ -54,6 +59,10 @@ export function TodayPage() {
           className="min-[1200px]:row-span-2"
         />
         <JournalCard today={today} />
+      </div>
+      <div className="grid grid-cols-1 items-start gap-5 min-[1200px]:grid-cols-2">
+        <GospelCard today={today} />
+        <GratitudeCard today={today} />
       </div>
       <RibbonDivider size={18} className="text-border" />
       <TomorrowRow today={today} timeFormat={timeFormat} />

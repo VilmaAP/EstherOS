@@ -1,10 +1,10 @@
-import { mkdtempSync, readFileSync, rmSync, statSync } from "node:fs";
+import { mkdtempSync, readdirSync, readFileSync, rmSync, statSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import Database from "better-sqlite3";
 
 const ROOT = process.cwd();
-const MIGRATION = join(ROOT, "src-tauri", "migrations", "0001_init.sql");
+const MIGRATIONS_DIR = join(ROOT, "src-tauri", "migrations");
 const VERSION = (
   JSON.parse(readFileSync(join(ROOT, "src-tauri", "tauri.conf.json"), "utf8")) as {
     version: string;
@@ -43,7 +43,11 @@ export class FakeBackend {
     this.db = new Database(":memory:");
     // The sqlx connection used by the app enables foreign keys by default.
     this.db.pragma("foreign_keys = ON");
-    this.db.exec(readFileSync(MIGRATION, "utf8"));
+    for (const file of readdirSync(MIGRATIONS_DIR)
+      .filter((name) => name.endsWith(".sql"))
+      .sort()) {
+      this.db.exec(readFileSync(join(MIGRATIONS_DIR, file), "utf8"));
+    }
   }
 
   private run(sql: string, values: unknown) {

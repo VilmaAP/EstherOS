@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import { createBrowserRouter, Navigate, type RouteObject } from "react-router";
 import { CalendarPage } from "@/features/calendar";
+import { GospelPage } from "@/features/gospel";
+import { GratitudePage } from "@/features/gratitude";
 import { JournalPage } from "@/features/journal";
 import { SettingsPage } from "@/features/settings";
 import { TodayPage } from "@/features/today";
@@ -16,6 +18,8 @@ const PAGES: Record<string, ReactNode> = {
   "/calendar": <CalendarPage />,
   "/journal": <JournalPage />,
   "/todo": <TodoPage />,
+  "/gratitude": <GratitudePage />,
+  "/gospel": <GospelPage />,
   "/settings": <SettingsPage />,
 };
 
